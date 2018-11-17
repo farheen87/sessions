@@ -6,8 +6,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 {
 	$name=$_POST['txtname'];
 	$psd=$_POST['password'];
-	//echo $name."<br>";
-	//echo $psd;
+
 	$qry="select username,password from login1 where username='$name' and password='$psd'";
 	$exec=mysql_query($qry);
 	$row=mysql_fetch_array($exec);
